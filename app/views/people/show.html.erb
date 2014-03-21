@@ -1,0 +1,18 @@
+<div class="jumbotron" style="position:absolute;top:120px;left:4in;width:auto">
+
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @person.name %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @person.message %>
+</p>
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>
+</div>

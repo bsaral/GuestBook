@@ -1,44 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GuestBook</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+	<title>GuestBook</title>
+	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
 	<div class="navbar navbar-default navbar-fixed-top navbar-inverse" >
-	<div class="navbar-inner" >
-  	<div class="container" >
-  		<div class="navbar-header">
-  			<a href="/" class="navbar-brand" style="font-size:25px;">MİSAFİR DEFTERİ</a>
-  		</div>
-        <div class="navbar-collapse collapse" id="navbar-main">
-        	<ul class="nav navbar-nav">
-        		<a href="#" class="navbar-brand"></a>
-        	</ul>
-        	<ul class="nav navbar-nav navbar-right">
-        		
-            
-           </ul>
-       </div>
-   	</div>
-   </div>
-</div>
+		<div class="navbar-inner" >
+			<div class="container" >
+				<div class="navbar-header">
+					<a href="/" class="navbar-brand" style="font-size:25px;position:relative;top:-20px;right:100px;"> <%= image_tag "book.png" %>MİSAFİR DEFTERİ </a>
+				</div>
+				<div class="navbar-collapse collapse" id="navbar-main">
 
-<%= yield %>
+					<ul class="nav navbar-nav navbar-right">
+						<a href="<%= new_person_path %>" class="navbar-brand" style="position:relative;top:-10px"><%= image_tag "mesaj.png" %>Yeni Mesaj</a>
+						<% if current_user %>
+							<a href="<%= logout_path %>" class="navbar-brand" > Çıkış </a>
+						<% end %>
 
-<div class="navbar-fixed-bottom" style="height:35px;">
-   <div class="navbar navbar-inverse" style = "margin-bottom: 0px;">
-      <div class="navbar-inner">
-        <div class="container">
-           <ul class="nav pull-right">
-           <a href="#" class="navbar-brand" style = "position:absolute;left:5in; top:-10px;font-size:15px;">©2014 - Betül SARAL, Tuğba DEVRAVUT </a>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>    
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<%= yield %>
+
+	<div class="navbar-fixed-bottom" style="height:35px;">
+		<div class="navbar navbar-inverse" style = "margin-bottom: 0px;">
+			<div class="navbar-inner">
+				<div class="container">
+					<ul class="nav pull-right">
+						<a href="#" class="navbar-brand" style = "position:absolute;left:5in; top:-10px;font-size:15px;">©2014 - Betül SARAL, Tuğba DEVRAVUT </a>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>    
 
 </body>
 </html>

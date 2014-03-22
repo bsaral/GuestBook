@@ -12,6 +12,8 @@ gem 'jbuilder', '~> 1.2'
 gem 'therubyracer'
 gem 'execjs'
 gem 'mysql2', "0.3.10"
+gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
+gem 'protected_attributes'
 
 group :doc do
   gem 'sdoc', require: false

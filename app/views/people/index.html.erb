@@ -1,33 +1,13 @@
 <div class="hero-unit" style="position:absolute;top:120px;left:4in;width:auto;">
-<h1>Listing people</h1>
-
-<table>
-  <thead>
-    <tr>
-      
-      <th>Name</th>
-      <th>Message</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @people.each do |person| %>
-      <tr>
-        
-        <td><%= person.name %></td>
-        <td><%= person.message %></td>
-        <td><%= link_to 'Show', person %></td>
-        <td><%= link_to 'Edit', edit_person_path(person) %></td>
-        <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Person', new_person_path %>
-</div>
+	<% @people.each do |person| %>
+		<div id = "kutu" style = "background-color:#485680;width:6.2in;height:auto;">
+			<% if current_user %>
+				<b style="color:white;text-transform:uppercase;position:relative;top:10px;left:20px;font-size:18px;"><%=person.name %> :</b> <%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' }, style: "color:white;position:relative;left:3.5in;top:5px;", class: "btn btn-danger" %>
+			<% else %>
+				<b style="color:white;text-transform:uppercase;position:relative;top:10px;left:20px;font-size:18px;"><%=person.name %> :</b>
+			<% end %>
+			<br><br><p style="color:white;text-transform:capitalize;position:relative;left:20px;font-size:15px;padding-right:50px;"> <%= person.message %> </p><br>
+			
+		</div><br><br>
+	<% end %>
+</div><br><br><br><br>

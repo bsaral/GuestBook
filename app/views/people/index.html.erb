@@ -2,7 +2,7 @@
 	<% @people.each do |person| %>
 		<div id = "kutu" style = "background-color:#485680;width:6.2in;height:auto;">
 			<% if current_user %>
-				<b style="color:white;text-transform:uppercase;position:relative;top:10px;left:20px;font-size:18px;"><%=person.name %> :</b> <%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' }, style: "color:white;position:relative;left:3.5in;top:5px;", class: "btn btn-danger" %>
+				<b style="color:white;text-transform:uppercase;position:relative;top:10px;left:20px;font-size:18px;"><%=person.name %> :</b> <%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' }, style: "color:white;float:right", class: "btn btn-danger" %>
 			<% else %>
 				<b style="color:white;text-transform:uppercase;position:relative;top:10px;left:20px;font-size:18px;"><%=person.name %> :</b>
 			<% end %>

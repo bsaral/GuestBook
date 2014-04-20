@@ -4,23 +4,22 @@
 	</div><br><br>
 
 	<%= form_tag sessions_path do %>
-	<% if flash[:error_admin] %>
-	<div class = "alert alert-warning" style="width:4in;position:relative;left:0px;top:-10px">
-		<%= flash[:error_admin] %>
-	</div>
-	<% end %>
+		<% if flash[:error_admin] %>
+		<div class = "alert alert-warning" style="width:4in;position:relative;left:0px;top:-10px">
+			<%= flash[:error_admin] %>
+		</div>
+		<% end %>
 
-	<div class="input-group" style="width:5in;">
-		<span class="input-group-addon">Kullanıcı Adı</span>
-		<%= text_field_tag :name, "",:class=>"form-control"%>
-	</div><br><br>
-	<div class="input-group" style="width:5in;">
-		<span class="input-group-addon">Parola</span>
-		<%= password_field_tag :password,"",:class=>"form-control"%>
-	</div>
-	<div class="actions">
-		<%= submit_tag "Gönder", class: 'btn btn-primary', style: "width:2in;position:relative;top:30px;left:3in"%>
-	</div>
+		<div class="input-group" style="width:5in;">
+			<span class="input-group-addon">Kullanıcı Adı</span>
+			<%= text_field_tag :name, "",:class=>"form-control"%>
+		</div><br><br>
+		<div class="input-group" style="width:5in;">
+			<span class="input-group-addon">Parola</span>
+			<%= password_field_tag :password,"",:class=>"form-control"%>
+		</div>
+		<div class="actions">
+			<%= submit_tag "Gönder", class: 'btn btn-primary', style: "width:2in;position:relative;top:30px;left:3in"%>
+		</div>
 	<% end %>
-
 </div>

@@ -4,22 +4,21 @@
 	</div><br><br>
 
 	<%= form_for @person, :html => {:class => "form-inline"} do |f| %>
-	  <% if flash[:error] %>
+		<% if flash[:error] %>
 		<div class = "alert alert-warning" style="width:4in;position:relative;left:0px;top:-10px">
-	 		<%= flash[:error] %>
-	 	</div>
-	 <% end %>
-
-	  <div class="input-group" style="width:5in;">
-	    <span class="input-group-addon">Ad-Soyad</span>
-	    <%= f.text_field :name,:class=>"form-control"%>
-	  </div><br><br>
-	 <div class="input-group" style="width:5in;">
-	    <span class="input-group-addon">Mesaj</span>
-	    <%= f.text_area :message,:class=>"form-control",:cols => 10, :rows => 7%>
-	  </div>
-	  <div class="actions">
-	    <%= f.submit "Gönder", class: 'btn btn-primary', style: "width:2in;position:relative;top:30px;left:3in"%>
-	  </div>
+			<%= flash[:error] %>
+		</div>
+		<% end %>
+		<div class="input-group" style="width:5in;">
+			<span class="input-group-addon">Ad-Soyad</span>
+			<%= f.text_field :name,:class=>"form-control"%>
+		</div><br><br>
+		<div class="input-group" style="width:5in;">
+			<span class="input-group-addon">Mesaj</span>
+			<%= f.text_area :message,:class=>"form-control",:cols => 10, :rows => 7%>
+		</div>
+		<div class="actions">
+			<%= f.submit "Gönder", class: 'btn btn-primary', style: "width:2in;position:relative;top:30px;left:3in"%>
+		</div>
 	<% end %>
 </div>

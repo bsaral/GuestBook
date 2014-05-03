@@ -11,7 +11,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'therubyracer'
 gem 'execjs'
 gem 'protected_attributes'
-gem 'pg'
+gem 'sqlite3'
 gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
 
 group :development do
